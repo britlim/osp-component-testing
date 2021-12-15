@@ -1,29 +1,32 @@
-import React, { useContext } from 'react';
-import SchemaView from '../../components/view/schemaView';
-import CodeView from '../../components/view/codeView';
-import VisualizeView from '../../components/view/visualizeView';
-// import GraphiqlView from './graphiqlView'; // removes unused comoponent
-import TableForm from '../popup/tableForm';
-import { Store } from '../../state/store';
-import TestsView from './testsView';
+import React from 'react';
+// import SchemaView from '../../components/view/schemaView';
+// import CodeView from '../../components/view/codeView';
+// import VisualizeView from '../../components/view/visualizeView';
+// import TableForm from '../popup/tableForm';
+// import { Store } from '../../state/store';
+// import TestsView from './testsView';
 
 function MainView() {
-  /*
-    -> connects the application to the context (utilized by Hooks in React) and facilitates the ability to
-      update the context of the application
-    -> the context is initialized by useContext() and specified by Store which is found
-      in /components/state/store.jsx
-  */
-  const { state: { view, popUp } } = useContext(Store);
+//   const Container = styled.div`
+//   display: grid;
+//   grid-template-columns: repeat(7, 1fr);
+//   grid-template-rows: 65px auto;
+//   grid-template-areas: 
+//     "header header header header header header header"
+//     "navSideBar main main main main main main";
+//   height: 100vh;
+//   background-color: #EEEFF0;
+//   font-family: "Roboto", sans-serif;
+// `;
   return (
-    <div style={{ gridArea: "main", overflowX: "auto", }}>
-      {view === 'code' && <CodeView />}
-      {view === 'schema' && <SchemaView />}
-      {view === 'visualize' && <VisualizeView />}
-      {view === 'tests' && <TestsView />}
-      {popUp === 'table' && <TableForm />}
-    </div>
+    <Container />
   )
 }
 
 export default MainView;
+
+      {/* {view === 'code' && <CodeView />}
+      {view === 'schema' && <SchemaView />}
+      {view === 'visualize' && <VisualizeView />}
+      {view === 'tests' && <TestsView />}
+      {popUp === 'table' && <TableForm />} */}
