@@ -47,6 +47,11 @@ const OpenFolder = async (win, doInclude, doNotInclude) => {
   } catch(err){
     console.log('Open Folder Error: ', err);
   }
+  return(
+    <div>
+    <button>Upload</button>
+    </div>
+  )
 }
 
 export default OpenFolder

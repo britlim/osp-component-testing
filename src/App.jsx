@@ -7,6 +7,7 @@ import React  from 'react';
 import Header from './components/header/Header.jsx'
 // import styled from 'styled-components';
 import Drag from './components/Drag.jsx'
+import OpenFolder from './components/Openfolder.jsx';
 
 
 export default function App() {
@@ -14,6 +15,7 @@ export default function App() {
     <div>
       <Header />
       <Drag />
+      <OpenFolder />
       </div>
   )
 }
